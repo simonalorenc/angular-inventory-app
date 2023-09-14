@@ -1,11 +1,13 @@
-<product-image [product]="product"></product-image>
-<div class="content">
+<div class="item" [ngClass]="{'selected': isClassAdded}" (click)="addClass()">
+  <product-image [product]="product"></product-image>
+  <div class="content">
     <div class="header">{{ product.name }}</div>
     <div class="meta">
-        <div class="product-sku">SKU #{{ product.sku }}</div>
+      <div class="product-sku">SKU #{{ product.sku }}</div>
     </div>
     <div class="description">
-        <product-department [product]="product"></product-department>
+      <product-department [product]="product"></product-department>
     </div>
+  </div>
+  <price-display class="price" [price]="product.price"></price-display>
 </div>
-<price-display [price]="product.price"></price-display>

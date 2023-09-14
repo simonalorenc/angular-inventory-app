@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, HostBinding } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
@@ -13,7 +13,6 @@ export class ProductsListComponent {
   private currentProduct!: Product
 
   constructor() {
-    console.log(this.currentProduct)
     this.onProductSelected = new EventEmitter();
   } 
 

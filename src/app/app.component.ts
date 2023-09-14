@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, HostBinding } from '@angular/core';
 import { Product } from './product.model';
 
 @Component({
@@ -6,6 +6,7 @@ import { Product } from './product.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   products: Product[]
 

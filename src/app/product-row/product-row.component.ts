@@ -9,4 +9,9 @@ import { Product } from '../product.model';
 export class ProductRowComponent {
   @Input() product!: Product
   @HostBinding('attr.class') cssClass= 'item'
+  isClassAdded: boolean = false
+
+  addClass() {
+    this.isClassAdded = !this.isClassAdded
+  }
 }
